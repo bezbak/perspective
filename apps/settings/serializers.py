@@ -1,6 +1,10 @@
 from rest_framework import serializers
-from apps.settings.models import Review, Otklic, Gallery
+from apps.settings.models import Review, Otklic, Gallery,Settings
 
+class SettingsSerializer(serializers.ModelSerializer):
+    class Meta():
+        model = Settings
+        fields = '__all__'
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta():

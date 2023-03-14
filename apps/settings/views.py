@@ -1,7 +1,10 @@
 from rest_framework import generics
 from apps.settings.serializers import *
-from apps.settings.models import Gallery, Review, Otklic
+from apps.settings.models import Gallery, Review, Otklic, Settings
 
+class SettingsAPIView(generics.ListAPIView):
+    queryset = Settings.objects.all()
+    serializer_class = SettingsSerializer
 class GalleryAPIView(generics.ListAPIView):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer

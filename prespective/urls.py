@@ -10,6 +10,7 @@ api_urlpatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ckeditor/',include('ckeditor_uploader.urls')),
     path('api/', include(api_urlpatterns)),
     path('', TemplateView.as_view(template_name = 'index.html')),
     path('home/', TemplateView.as_view(template_name = 'index.html')),
@@ -19,4 +20,5 @@ urlpatterns = [
     path('contact/', TemplateView.as_view(template_name = 'index.html')),
     path('gallery/', TemplateView.as_view(template_name = 'index.html')),
     path('#/', TemplateView.as_view(template_name = 'index.html')),
+    
 ]

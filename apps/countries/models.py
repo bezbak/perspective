@@ -8,13 +8,10 @@ class Countries(models.Model):
     author = models.CharField(
         max_length=100
     )
-    date = models.DateField(
-        auto_now_add=False
-    )
     image = models.FileField(
         upload_to='countries/'
     )
-    description = models.TextField(
+    description = models.CharField(
         max_length=1000
     )
     quote = models.CharField(

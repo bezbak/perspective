@@ -8,6 +8,9 @@ class Teacher(models.Model):
     experience = models.CharField(
         max_length=55
     )
+    image = models.ImageField(
+        upload_to='team/'
+    )
     def __str__(self):
         return self.name
     class Meta:
